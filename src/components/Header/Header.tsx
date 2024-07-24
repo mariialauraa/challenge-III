@@ -1,6 +1,6 @@
 import { FaRegUser } from "react-icons/fa"
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import Logo from '../assets/logo_furniro.svg'
+import Logo from '../../assets/logo_furniro.svg'
 
 const Header = () => {
 
