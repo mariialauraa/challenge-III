@@ -1,9 +1,11 @@
+import Header from "./Header/Header"
+
 function App() {
 
   return (
-    <>
-      <h1 className="text-4xl font-bold text-red-600">Hello World</h1>
-    </>
+    <div>
+      <Header />
+    </div>
   )
 }
 
