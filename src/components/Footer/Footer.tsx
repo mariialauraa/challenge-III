@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
   return (
-    <footer className='max-w-[1440px] h-[505px] text-black pt-20 mx-auto'>
+    <footer className='max-w-[1440px] h-[505px] text-black pt-16 mx-auto'>
         <div className='mx-auto grid grid-cols-1 md:grid-cols-4 ml-12 md:ml-24 justify-center'>
             <div>
                 <h2 className='text-2xl font-poppins font-bold mb-12'>Funiro.</h2>
