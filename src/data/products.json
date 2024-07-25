@@ -710,8 +710,8 @@
         "category": "Armarios",
         "tags": ["Armario", "Casa", "Quarto"],
         "normalPrice": 1489.99,
-        "salePrice": 0,
-        "discountPercentage": 0,
+        "salePrice": 881.87,
+        "discountPercentage": 0.40,
         "new": true,
         "description": {
           "short": "Guarda-Roupa Solteiro New Conect 4 PT 3 GV",
@@ -813,9 +813,9 @@
         "title": "Guarda-Roupa Malibu",
         "category": "Armarios",
         "tags": ["Armario", "Casa", "Quarto"],
-        "normalPrice": 579.99,
-        "salePrice": 0,
-        "discountPercentage": 0,
+        "normalPrice": 1404.99,
+        "salePrice": 875.66,
+        "discountPercentage": 0.37,
         "new": true,
         "description": {
           "short": "Guarda-Roupa Casal Malibu 6 PT 2 GV",
@@ -881,12 +881,12 @@
         "title": "Guarda-Roupa com Espelho Lugano",
         "category": "Armarios",
         "tags": ["Armario", "Casa", "Quarto"],
-        "normalPrice": 1556.96,
-        "salePrice": 0,
-        "discountPercentage": 0,
+        "normalPrice": 2739.99,
+        "salePrice": 1556.96,
+        "discountPercentage": 0.43,
         "new": false,
         "description": {
-          "short": "Guarda-Roupa Solteiro com 1 Espelho Lugano 2",
+          "short": "Guarda-Roupa Solteiro com 1 Espelho Lugano 2 PT 2 GV Branco",
           "long": "O Guarda-Roupa Lugano tem gavetas que recebem roupas dobradas, enquanto os cabideiros deixam as peças longas e delicadas livres de amassados. Já os outros compartimentos apoiam edredons, toalhas, malas de viagem, caixas organizadoras e o que mais você precisar deixar por perto para simplificar a rotina - falando em facilitar, o espelho na porta é um detalhe curinga que não te deixa perder nenhum detalhe do seu look. Com cor sóbria e estrutura clássica, você ganha ainda um aliado para a decoração e que, graças às portas de correr, vai te  ajudar a aproveitar muito mais o espaço do dormitório."
         },
         "colors": [
@@ -946,7 +946,7 @@
         "tags": ["Armario", "Casa", "Cozinha"],
         "normalPrice": 2249.99,
         "salePrice": 899.99,
-        "discountPercentage": 0.4,
+        "discountPercentage": 0.6,
         "new": false,
         "description": {
           "short": "Armário de Cozinha Completa Madesa Emilly Box com Balcão e Aéreo Vidro - Rustic/Preto",
@@ -976,9 +976,9 @@
         "title": "Cadeira Charles Eames II",
         "category": "Cadeiras",
         "tags": ["Sala de Jantar", "Cadeiras de jantar", "Cadeiras de cozinha"],
-        "normalPrice": 169.17,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 220.99,
+        "salePrice": 169.17,
+        "discountPercentage": 0.23,
         "new": true,
         "description": {
           "short": "Cadeira Charles Eames. Além do formato muito tradicional no mundo do design que proporciona mais comodidade durante as atividades",
@@ -1020,9 +1020,9 @@
           "Conjunto de Mesas e Cadeiras de Jantar",
           "Cadeiras de Cozinha"
         ],
-        "normalPrice": 710.96,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 1199.99,
+        "salePrice": 710.96,
+        "discountPercentage": 0.4,
         "new": false,
         "description": {
           "short": "O Conjunto de Cadeiras Mona vai ficar incrível no seu lar-style. Além de embelezar o ambiente, graças à estrutura em aço com pintura preta",
@@ -1059,9 +1059,9 @@
         "title": "Cadeiras Tiva Linho",
         "category": "Cadeiras",
         "tags": ["Cadeiras de Jantar", "Sala de Jantar"],
-        "normalPrice": 610.97,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 1039.99,
+        "salePrice": 610.97,
+        "discountPercentage": 0.41,
         "new": true,
         "description": {
           "short": "O Conjunto Tiva não só é funcional como também leva um toque de design sofisticado ao seu cantinho.",
@@ -1098,9 +1098,9 @@
         "title": "Cadeiras Windsor Fendi",
         "category": "Cadeiras",
         "tags": ["Cadeiras de Jantar", "Sala de Jantar"],
-        "normalPrice": 872.99,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 1599.99,
+        "salePrice": 872.99,
+        "discountPercentage": 0.45,
         "new": false,
         "description": {
           "short": "Com design moderno, as 4 peças têm pés em madeira, que dão firmeza ao uso, e encosto com detalhes vazados",
@@ -1142,9 +1142,9 @@
           "cozinha",
           "cadeiras de cozinha"
         ],
-        "normalPrice": 359.96,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 949.99,
+        "salePrice": 359.96,
+        "discountPercentage": 0.62,
         "new": false,
         "description": {
           "short": "Com design moderno, as 4 peças têm pés em madeira, que dão firmeza ao uso, e encosto com detalhes vazados",
@@ -1188,12 +1188,12 @@
           "cadeiras de cozinha"
         ],
         "normalPrice": 159.9,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
-        "new": true,
+        "salePrice": 159.90,
+        "discountPercentage": 0,
+        "new": false,
         "description": {
           "short": "Com design moderno, as 4 peças têm pés em madeira, que dão firmeza ao uso, e encosto com detalhes vazados",
-          "long": "Perfeito para a sala de jantar dos sonhos, o Conjunto Tiva não só é funcional como também leva um toque de design sofisticado ao seu cantinho. Enquanto a estrutura resistente, o enchimento em espuma e o revestimento em Linho conferem todo o aconchego necessário, as 2 peças têm coloração atemporal e acabamento amadeirado, formando o combo certo para deixar seu cantinho repleto de bom gosto e requinte. Já dá para se imaginar aproveitando bons pratos em ótima companhia, né?"
+          "long": "Perfeito para a sala de jantar dos sonhos, o Conjunto Tiva não só é funcional como também leva um toque de design sofisticado ao seu cantinho. Enquanto a estrutura resistente, o enchimento em espuma e o revestimento em Linho conferem todo o aconchego necessário, as 2 peças têm coloração atemporal e acabamento amadeirado, formando o combo certo para deixar seu cantinho repleto de bom gosto e requinte."
         },
         "colors": [
           {
@@ -1226,9 +1226,9 @@
         "sku": "1163777",
         "category": "Cadeiras",
         "tags": ["Sala de jantar", "cadeiras de jantar"],
-        "normalPrice": 712.71,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 1115.87,
+        "salePrice": 712.71,
+        "discountPercentage": 0.36,
         "new": true,
         "description": {
           "short": "A Cadeira Ávila combina estilo e funcionalidade de uma maneira única. Estruturada em madeira maciça, possui detalhes curvilíneos que trazem suavidade e delicadeza a peça",
@@ -1265,9 +1265,9 @@
         "sku": "1144106",
         "category": "Cadeiras",
         "tags": ["sala de jantar", "Cadeiras de jantar"],
-        "normalPrice": 887.31,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 1565.47,
+        "salePrice": 887.31,
+        "discountPercentage": 0.43,
         "new": true,
         "description": {
           "short": "Estruturada em aço carbono, contrasta lindamente com o encosto e assento estofados que são extremamente confortáveis, resistentes e aconchegantes.",
@@ -1309,9 +1309,9 @@
           "cozinha",
           "cadeiras de cozinha"
         ],
-        "normalPrice": 170.9,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 187.90,
+        "salePrice": 170.9,
+        "discountPercentage": 0.09,
         "new": false,
         "description": {
           "short": "Estruturada em aço carbono, contrasta lindamente com o encosto e assento estofados que são extremamente confortáveis, resistentes e aconchegantes.",
@@ -1352,9 +1352,9 @@
           "cadeiras de jantar",
           "Conjunto de mesas e cadeiras de jantar"
         ],
-        "normalPrice": 368.96,
-        "salePrice": 175,
-        "discountPercentage": 0.3,
+        "normalPrice": 616.99,
+        "salePrice": 368.96,
+        "discountPercentage": 0.4,
         "new": false,
         "description": {
           "short": "A estrutura em ferro com pintura epóxi preta e à cor grafite do revestimento em Linho, ela também acomoda superbem, pois conta com assento e encosto estofados em espuma de densidades ideais para acolher bem cada parte específica do corpo",
