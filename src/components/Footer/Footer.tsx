@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/f
 const Footer = () => {
   return (
     <footer className='max-w-[1440px] h-[505px] text-black pt-20 mx-auto'>
-        <div className='mx-auto grid grid-cols-1 md:grid-cols-4 mt-12 ml-24'>
+        <div className='mx-auto grid grid-cols-1 md:grid-cols-4 ml-12 md:ml-24 justify-center'>
             <div>
                 <h2 className='text-2xl font-poppins font-bold mb-12'>Funiro.</h2>
                 <p className='text-base font-poppins font-normal text-gray-400'>
@@ -55,8 +55,8 @@ const Footer = () => {
                 </form>
             </div>
         </div>
-        <div className='border-t border-gray-300 ml-24 mr-8 mt-6 md:mt-0'>
-            <p className='font-normal text-base text-black font-poppins pt-4'>
+        <div className='border-t border-gray-300 ml-12 md:ml-24 mr-8 mt-6 md:mt-0 pb-4'>
+            <p className='font-normal text-base text-black font-poppins pt-4 text-center md:text-start'>
                 2023 funiro. All rights reserved
             </p>
         </div>

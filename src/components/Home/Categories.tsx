@@ -4,7 +4,7 @@ import Bedroom from '../../assets/bedroom.png'
 
 const Categories = () => {
   return (
-    <div className='mt-14 font-poppins text-center'>
+    <div className='my-12 font-poppins text-center'>
         <h2 className='font-bold text-black text-3xl mb-2'>Browse The Range</h2>
         <p className='text-gray-600 text-xl font-normal'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -6,17 +6,17 @@ const Header = () => {
 
   return (
     <div className="bg-white w-full">
-        <div className="max-w-[90rem] h-24 mx-auto flex flex-wrap md:flex-nowrap justify-between items-center p-4">
-            <div className="flex items-center mb-4 cursor-pointer">
-                <img src={Logo} alt="logo" />
+        <div className="max-w-[90rem] mx-auto flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center p-4">
+            <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
+                <img src={Logo} alt="logo"/>
             </div>
-            <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium mb-4">
+            <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium">
                 <a href="/" className="text-black mr-14">Home</a>
                 <a href="/shop" className="text-black mr-14">Shop</a>
                 <a href="/about" className="text-black mr-14">About</a>
                 <a href="/contact" className="text-black">Contact</a>
             </nav>
-            <div className="flex items-center gap-6 cursor-pointer">
+            <div className="flex items-center gap-12 md:gap-6 cursor-pointer py-2">
                 <FaRegUser className="w-6 h-5"/>
                 <AiOutlineShoppingCart className="w-7 h-7"/>
             </div>
