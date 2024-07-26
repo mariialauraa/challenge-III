@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import productsData from '../../data/products.json'
+import productsData from '../../../public/data/products.json'
 
 const Products = () => {
 

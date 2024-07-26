@@ -13,7 +13,7 @@ const Header = () => {
             <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium">
                 <a href="/" className="text-black mr-14">Home</a>
                 <a href="/shop" className="text-black mr-14">Shop</a>
-                <a href="/about" className="text-black mr-14">About</a>
+                <a href="/" className="text-black mr-14">About</a>
                 <a href="/contact" className="text-black">Contact</a>
             </nav>
             <div className="flex items-center gap-12 md:gap-6 cursor-pointer py-2">

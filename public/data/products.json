@@ -20,7 +20,7 @@
             "hex": "#0000FF"
           }
         ],
-        "sizes": ["M", "G"],
+        "sizes": ["M", "L"],
         "rating": 4.9,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Keva-SofC3A1-Cama-2-Lugares-Casal-GC3A9nova-Azul-3355-916355-1.jpg",
@@ -52,7 +52,7 @@
             "hex": "#808080"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 3.2,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-Cama-3-Lugares-Casal-Premium-Suede-Cinza-9969-770002-1.jpg",
@@ -84,7 +84,7 @@
             "hex": "#808080"
           }
         ],
-        "sizes": ["P", "M"],
+        "sizes": ["S", "M"],
         "rating": 4.4,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Keva-SofC3A1-Cama-3-Lugares-Casal-CC3B3rsega-Cinza-Escuro-5151-326355-1.jpg",
@@ -116,7 +116,7 @@
             "hex": "#FFFF00"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 4.7,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Keva-SofC3A1-Cama-3-Lugares-Casal-Venice-Amarelo-1199-739396-1.jpg",
@@ -148,7 +148,7 @@
             "hex": "#FFEBCD"
           }
         ],
-        "sizes": ["G", "EG"],
+        "sizes": ["L", "XL"],
         "rating": 4.6,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-RetrC3A1til-Sem-Caixa-3-lugares-Solomons-Linho-Bege-2636-3691811-1.jpg",
@@ -180,7 +180,7 @@
             "hex": "#F5F5DC"
           }
         ],
-        "sizes": ["EG"],
+        "sizes": ["XL"],
         "rating": 4.9,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-3-Lugares-RetrC3A1til-e-ReclinC3A1vel-Lupin-Linho-Cru-5088-5391811-1.jpg",
@@ -212,7 +212,7 @@
             "hex": "#808080"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-3-Lugares-Belgrado-com-Chaise-Direito-Linho-Cinza-230-cm-0955-758318-1.jpg",
@@ -276,7 +276,7 @@
             "hex": "#4F4F4F"
           }
         ],
-        "sizes": ["M", "G"],
+        "sizes": ["M", "L"],
         "rating": 4.5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-3-Lugares-RetrC3A1til-Berna-Linho-Grafite-180-cm-5086-465248-1.jpg",
@@ -308,7 +308,7 @@
             "hex": "#808080"
           }
         ],
-        "sizes": ["EG"],
+        "sizes": ["XL"],
         "rating": 4.5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-SofC3A1-3-Lugares-RetrC3A1til-e-ReclinC3A1vel-Lupin-Linho-Cinza-5257-7391811-1.jpg",
@@ -340,7 +340,7 @@
             "hex": "#FFEBCD"
           }
         ],
-        "sizes": ["M", "G", "EG"],
+        "sizes": ["M", "L", "XL"],
         "rating": 4.5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Keva-Mesa-de-Jantar-Retangular-MacaC3BAba-Madeira-MaciC3A7a-AmC3AAndoa-160-cm-9360-2432211-1.jpg",
@@ -372,7 +372,7 @@
             "hex": "#3B2F2F"
           }
         ],
-        "sizes": ["P", "M"],
+        "sizes": ["S", "M"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/New-Ceval-Mesa-de-Jantar-Redonda-com-Tampo-de-Vidro-Isabela-IpC3AA-e-Off-White-100-cm-3527-530547-1.jpg",
@@ -402,7 +402,7 @@
             "hex": "#D2B48C"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Mesa-de-Jantar-Retangular-com-Tampo-de-Vidro-Agata-Off-White-e-Nature-130-cm-4488-934018-1.jpg",
@@ -434,7 +434,7 @@
             "hex": "#A5694F"
           }
         ],
-        "sizes": ["M", "G", "EG"],
+        "sizes": ["M", "L", "XL"],
         "rating": 4.7,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Keva-Mesa-de-Jantar-Quadrada-Industrial-Stanford-AmC3AAndoa-e-Preta-90-cm-3395-753216-1.jpg",
@@ -528,7 +528,7 @@
             "hex": "#A5694F"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Pradel-Mesa-de-EscritC3B3rio-em-L-Anah-FreijC3B3-e-Preta-0166-367309-1.jpg",
@@ -559,7 +559,7 @@
             "hex": "#773F1A"
           }
         ],
-        "sizes": ["G"],
+        "sizes": ["L"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Nogal-150-cm-9000-734108-1.jpg",
@@ -591,7 +591,7 @@
             "hex": "#FFFFFF"
           }
         ],
-        "sizes": ["M", "G"],
+        "sizes": ["M", "L"],
         "rating": 3.7,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-Mesa-de-EscritC3B3rio-em-L-Nero-Branco-0408-661122-2.jpg",
@@ -623,7 +623,7 @@
             "hex": "#000000"
           }
         ],
-        "sizes": ["M", "G"],
+        "sizes": ["M", "L"],
         "rating": 4.1,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Mesa-de-EscritC3B3rio-em-L-Studio-Preta-120x140-cm-1168-1778911-2.jpg",
@@ -1409,13 +1409,7 @@
             "hex": "#000000"
           }
         ],
-        "sizes": [
-            {
-              "height": "75 cm",
-              "width": "118 cm",
-              "depth": "53 cm"
-            }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Pradel-Escrivaninha-Anah-1-GV-FreijC3B3-e-Preta-0162-467309-1.jpg",
@@ -1451,13 +1445,7 @@
             "hex": "#ffffff"
           }
         ],
-        "sizes": [
-            {
-              "height": "75 cm",
-              "width": "150 cm",
-              "depth": "50 cm"
-            }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Escrivaninha-Studio-Mel-e-Branca-150-cm-6396-3970711-1.jpg",
@@ -1489,13 +1477,7 @@
             "hex": "#ffffff"
           }
         ],
-        "sizes": [
-            {
-              "height": "75,5 cm",
-              "width": "90 cm",
-              "depth": "45 cm"
-            }
-        ],
+        "sizes": ["XS", "S"],
         "rating": 5,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Mobly-Escrivaninha-Mendes-2-GV-Branca-8175-280523-1.jpg",
@@ -1527,13 +1509,7 @@
             "hex": "#654321"
           }
         ],
-        "sizes": [
-          {
-            "height": "75 cm",
-            "width": "180 cm",
-            "depth": "60 cm"
-          }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 4.9,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Compace-Escrivaninha-Studio-Carvalho-e-Preta-180-cm-3911-8279301-1.jpg",
@@ -1565,13 +1541,7 @@
             "hex": "#D2B48C"
           }
         ],
-        "sizes": [
-          {
-            "height": "75 cm",
-            "width": "150 cm",
-            "depth": "60 cm"
-          }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 4.9,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Escrivaninha-com-Estante-Studio-Mel-e-Branca-150x75-cm-6751-1280711-1.jpg",
@@ -1603,13 +1573,7 @@
             "hex": "#A0522D"
           }
         ],
-        "sizes": [
-          {
-            "height": "77 cm",
-            "width": "110 cm",
-            "depth": "54 cm"
-          }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 5.0,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Tebarrot-Escrivaninha-Old-2-GV-Nature-8886-2056601-1.jpg",
@@ -1645,13 +1609,7 @@
             "hex": "#8B4513"
           }
         ],
-        "sizes": [
-          {
-            "height": "78 cm",
-            "width": "120 cm",
-            "depth": "60 cm"
-          }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 5.0,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Fellicci-Moveis-Escrivaninha-Wood-1-GV-Branca-e-Marrom-6058-4809901-1.jpg",
@@ -1683,13 +1641,7 @@
             "hex": "#A0522D"
           }
         ],
-        "sizes": [
-          {
-            "height": "88 cm",
-            "width": "110 cm",
-            "depth": "54 cm"
-          }
-        ],
+        "sizes": ["L", "XL", "XS"],
         "rating": 4.8,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Tebarrot-Escrivaninha-CalifC3B3rnia-Nature-8882-3056601-1.jpg",
@@ -1725,13 +1677,7 @@
             "hex": "#8B4513"
           }
         ],
-        "sizes": [
-          {
-            "height": "76 cm",
-            "width": "136 cm",
-            "depth": "53 cm"
-          }
-        ],
+        "sizes": ["S", "M", "L"],
         "rating": 0.0,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Escrivaninha-Prism-1-PT-1-GV-Preta-e-Cinamomo-5196-6358611-1.jpg",
@@ -1767,13 +1713,7 @@
             "hex": "#D2B48C"
           }
         ],
-        "sizes": [
-          {
-            "height": "83 cm",
-            "width": "111 cm",
-            "depth": "33 cm"
-          }
-        ],
+        "sizes": ["XS", "S"],
         "rating": 4.9,
         "images": {
           "mainImage": "https://static.mobly.com.br/p/Modern-Escrivaninha-Mega-Office-Branca-e-AmC3AAndoa-8175-198491-1.jpg",
