@@ -1,4 +1,5 @@
 import GlobalHero from '../../assets/hero_shop.png'
+import Logo from '../../assets/logo.png'
 
 type HeroProps = {
     title: string;
@@ -20,6 +21,7 @@ const Hero = ({
             className="absolute w-full h-full object-cover"
         />
         <div className='relative flex flex-col justify-center items-center text-center'>
+            <img src={Logo} alt="Logo" className='mb-2'/>
             <h1 className='text-4xl font-poppins font-medium'>
                 {title}
             </h1>

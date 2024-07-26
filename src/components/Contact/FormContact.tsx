@@ -9,8 +9,8 @@ const FormContact = () => {
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="p-20 mx-auto w-[528px]">
-        <div className="flex flex-col gap-2 mb-2 text-base font-poppins font-medium">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-96">
+        <div className="flex flex-col gap-5 mb-9 text-base font-poppins font-medium">
             <label htmlFor="name">Your name</label>
             <input 
                 type="text" 
@@ -24,7 +24,7 @@ const FormContact = () => {
                 {errors.name.message}
             </small>)}
         </div>
-        <div className="flex flex-col gap-2 mb-2 text-base font-poppins font-medium">
+        <div className="flex flex-col gap-5 mb-9 text-base font-poppins font-medium">
             <label htmlFor="name">Email address</label>
             <input 
                 type="email" 
@@ -38,7 +38,7 @@ const FormContact = () => {
                 {errors.email.message}
             </small>)}
         </div>
-        <div className="flex flex-col gap-2 mb-2 text-base font-poppins font-medium">
+        <div className="flex flex-col gap-5 mb-9 text-base font-poppins font-medium">
             <label htmlFor="name">Subject</label>
             <input 
                 type="text" 
@@ -48,7 +48,7 @@ const FormContact = () => {
                 className="h-10 pl-4 border border-gray-400 rounded-md"
             />
         </div>
-        <div className="flex flex-col gap-2 mb-2 text-base font-poppins font-medium">
+        <div className="flex flex-col gap-5 mb-12 text-base font-poppins font-medium">
             <label htmlFor="name">Message</label>
             <textarea 
                 id="message"
@@ -61,12 +61,14 @@ const FormContact = () => {
                 {errors.message.message}
             </small>)}
         </div>
-        <button 
-            type="submit"
-            className="w-48 h-12 bg-[#B88E2F] rounded-md text-white my-2 hover:bg-[#c7982a] font-normal font-poppins text-base transition-all"
-        >
-            Submit
-        </button>
+        <div className="flex justify-center md:justify-start">
+            <button 
+                type="submit"
+                className="w-48 h-12 my-2 rounded-md bg-[#B88E2F] hover:bg-[#c7982a] text-white font-normal font-poppins text-base transition-all"
+            >
+                Submit
+            </button>
+        </div>
     </form>
   )
 }
