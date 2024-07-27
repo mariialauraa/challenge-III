@@ -4,6 +4,8 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { Icolors } from '../../types/product_types';
 import { useState } from "react";
+import { FaFacebook, FaInstagramSquare } from 'react-icons/fa'
+import { AiFillTwitterCircle } from "react-icons/ai";
 
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>()
@@ -85,15 +87,15 @@ const ProductDetail = () => {
                     </span>
                 </p>
             </div>
-            <div className="flex">
-                <div className="bg-[#F9F1E7] w-[432px] h-[500px] rounded-[10px] flex items-center justify-center overflow-hidden">
+            <div className="flex flex-col md:flex-row justify-center">
+                <div className="bg-[#F9F1E7] w-[432px] h-[500px] rounded-lg flex items-center justify-center overflow-hidden">
                     <img 
                         src={product.images.mainImage} 
                         alt={product.title} 
-                        className="w-96 h-96 object-contain"
+                        className="w-96 h-96 object-contain rounded-lg"
                     />
                 </div>
-                <div className="ml-8 font-poppins">
+                <div className="ml-0 md:ml-20 mt-8 md:mt-0 font-poppins">
                     <h1 className="text-4xl font-normal mb-2 mt-4">{product.title}</h1>
                     <span className="text-gray-400 font-medium text-2xl">R$ {product.salePrice}</span>
                     <div className="flex items-center mt-2">
@@ -115,6 +117,40 @@ const ProductDetail = () => {
                             <button className="text-base font-normal">+</button>
                         </div>
                         <button className="w-52 h-16 border border-black rounded-2xl text-xl font-normal">Add To Cart</button>
+                    </div>
+                    <div className="border-t border-gray-400 mt-16 font-poppins font-normal text-base text-gray-400">
+                        <h4 className="mt-10 mb-3">
+                            SKU 
+                            <span className="pl-16">:</span>
+                            <span className="pl-3">{product.sku}</span>
+                        </h4>
+                        <h4 className="mt-10 mb-3">
+                            Category
+                            <span className="pl-5">:</span>
+                            <span className="pl-3">{product.category}</span>
+                        </h4>
+                        <div className="mt-10 mb-3 flex items-center">
+                            <h4>Tags</h4>
+                            <span className="pl-14">:</span>
+                            <span className="pl-3">
+                                {product.tags.join(', ')}
+                            </span>
+                        </div>
+                        <div className="flex items-center mt-10 mb-3">
+                            <h4>Share</h4>
+                            <span className="pl-12">:</span>
+                            <div className="flex space-x-4 ml-4">
+                                <a href="https://facebook.com" className="text-black">
+                                    <FaFacebook className="w-5 h-5"/>
+                                </a>
+                                <a href="https://instagram.com" className="text-black">
+                                    <FaInstagramSquare className="w-5 h-5"/>
+                                </a>
+                                <a href="https://twitter.com" className="text-black">
+                                    <AiFillTwitterCircle className="w-5 h-5"/>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
