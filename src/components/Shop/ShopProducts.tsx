@@ -1,18 +1,36 @@
-import { useState } from 'react'
-import productsData from '../../../public/data/products.json'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { IProductsValues } from '../../types/product_types'
 
 const ShopProducts = () => {
+    const [products, setProducts] = useState<IProductsValues[]>([])
     const [currentPage, setcurrentPage] = useState(1)
     const productsPerPage = 12
 
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch('/data/products.json')
+                const data = await response.json()
+                setProducts(data.products)
+            } catch (error) {
+                console.error('Erro ao buscar produtos', error)
+            }
+        }
+
+        fetchProducts()
+    }, [])
+
     const indexOfLastProduct = currentPage * productsPerPage
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage
-    const currentProducts = productsData.products.slice(indexOfFirstProduct, indexOfLastProduct)
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct)
 
-    const paginate = (pageNumber: number) => setcurrentPage(pageNumber)
+    const paginate = (pageNumber: number) => {
+        setcurrentPage(pageNumber)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }        
 
-    const totalPages = Math.ceil(productsData.products.length / productsPerPage)
+    const totalPages = Math.ceil(products.length / productsPerPage)
 
     return (
         <div className='flex flex-col items-center'>

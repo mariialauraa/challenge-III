@@ -1,9 +1,25 @@
 import { Link } from 'react-router-dom'
-import productsData from '../../../public/data/products.json'
+import { useEffect, useState } from 'react'
+import { IProductsValues } from '../../types/product_types'
 
 const Products = () => {
+    const [products, setProducts] = useState<IProductsValues[]>([])
 
-    const productsToShow = productsData.products.slice(6, 14)
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch('/data/products.json')
+                const data = await response.json()
+                setProducts(data.products)
+            } catch (error) {
+                console.error('Erro ao buscar produtos', error)
+            }
+        }
+
+        fetchProducts()
+    }, [])
+
+    const productsToShow = products.slice(6, 14)
 
   return (
     <div className='container mx-auto py-8 max-w-full font-poppins'>
