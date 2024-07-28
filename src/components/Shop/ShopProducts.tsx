@@ -38,7 +38,7 @@ const ShopProducts = () => {
                 {currentProducts.map(product => (
                     <div 
                         key={product.id}
-                        className='p-4 relative w-[285px] h-[446px] mx-auto'
+                        className='p-4 relative w-[285px] mx-auto'
                     >
                         <Link to={`/product/${product.id}`} className='block h-full'>
                             <img 
@@ -47,12 +47,12 @@ const ShopProducts = () => {
                                 className='w-full h-48 object-cover'
                             />
                             {product.discountPercentage > 0 && (
-                                <span className='absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-3 rounded-full'>
+                                <span className='absolute top-2 right-2 bg-red-500 text-white text-xs px-1 py-3 rounded-full font-poppins'>
                                     -{Math.round(product.discountPercentage * 100)}%
                                 </span>
                             )}
                             {product.new && (
-                                <span className='absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-3 rounded-full'>
+                                <span className='absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-3 rounded-full font-poppins'>
                                     New
                                 </span>
                             )}

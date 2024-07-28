@@ -1,5 +1,6 @@
 import ProductDetail from "../components/ProductDetail/ProductDetail"
 import Description from "../components/ProductDetail/Description"
+import RelatedProducts from "../components/ProductDetail/RelatedProducts"
 
 
 const SingleProduct = () => {
@@ -7,6 +8,7 @@ const SingleProduct = () => {
     <div>
         <ProductDetail />
         <Description />
+        <RelatedProducts />
     </div>
   )
 }
