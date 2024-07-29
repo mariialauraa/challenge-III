@@ -9,7 +9,7 @@ const FormContact = () => {
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-96">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-72 md:w-96">
         <div className="flex flex-col gap-5 mb-9 text-base font-poppins font-medium">
             <label htmlFor="name">Your name</label>
             <input 
@@ -33,8 +33,7 @@ const FormContact = () => {
                 {...register("email")}
                 className="h-10 pl-4 border border-gray-400 rounded-md"
             />
-            {errors.email && (<small className="text-red-500 text-xs italic
-            ">
+            {errors.email && (<small className="text-red-500 text-xs italic">
                 {errors.email.message}
             </small>)}
         </div>
@@ -56,8 +55,7 @@ const FormContact = () => {
                 {...register("message")}
                 className="h-10 p-4 border border-gray-400 rounded-md min-h-28"
             ></textarea>
-            {errors.message && (<small className="text-red-500 text-xs italic
-            ">
+            {errors.message && (<small className="text-red-500 text-xs italic">
                 {errors.message.message}
             </small>)}
         </div>
