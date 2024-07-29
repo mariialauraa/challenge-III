@@ -1,8 +1,12 @@
 import { FaRegUser } from "react-icons/fa"
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { IoLogOutOutline } from "react-icons/io5";
 import Logo from '../../assets/logo_furniro.svg'
+import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+    const { logout } = useAuth()
 
   return (
     <div className="bg-white w-full">
@@ -11,14 +15,15 @@ const Header = () => {
                 <img src={Logo} alt="logo"/>
             </div>
             <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium">
-                <a href="/" className="text-black mr-14">Home</a>
-                <a href="/shop" className="text-black mr-14">Shop</a>
-                <a href="/" className="text-black mr-14">About</a>
-                <a href="/contact" className="text-black">Contact</a>
+                <Link to="/" className="text-black mr-14">Home</Link>
+                <Link to="/shop" className="text-black mr-14">Shop</Link>
+                <Link to="/" className="text-black mr-14">About</Link>
+                <Link to="/contact" className="text-black">Contact</Link>
             </nav>
             <div className="flex items-center gap-12 md:gap-6 cursor-pointer py-2">
                 <FaRegUser className="w-6 h-5"/>
                 <AiOutlineShoppingCart className="w-7 h-7"/>
+                <IoLogOutOutline onClick={logout} className="w-7 h-7"/>
             </div>
         </div>
     </div>
