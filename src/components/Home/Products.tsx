@@ -22,13 +22,13 @@ const Products = () => {
     const productsToShow = products.slice(6, 14)
 
   return (
-    <div className='container mx-auto py-8 max-w-full font-poppins'>
+    <div className='mx-auto py-8 max-w-full font-poppins'>
         <h2 className='text-center font-bold text-4xl mb-8'>Our Products</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 md:gap-8 justify-center'>
             {productsToShow.map(product => (
                 <div 
                     key={product.id}
-                    className='p-4 relative w-[285px] h-[446px] mx-auto'
+                    className='p-4 relative w-[285px] mx-auto'
                 >
                     <img 
                         src={product.images.mainImage} 
@@ -66,7 +66,7 @@ const Products = () => {
                 </div>
             ))}
         </div>
-        <div className='text-center'>
+        <div className='text-center mt-8'>
             <Link to="/shop">
                 <button className='font-poppins font-semibold text-[#B88E2F] text-base w-60 h-12 border border-[#B88E2F]'>
                     Show More

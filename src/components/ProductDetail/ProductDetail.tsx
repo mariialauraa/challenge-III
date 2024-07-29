@@ -42,7 +42,7 @@ const ProductDetail = () => {
     const renderColor = (colors: Icolors[]) => {
         return colors.map((color, index) => (
             <div key={index} className="flex items-center mt-2">
-                <span className="inline-block w-6 h-6 rounded-full" style={{ backgroundColor: color.hex }}></span>
+                <span className="inline-block w-6 h-6 rounded-full border border-gray-300" style={{ backgroundColor: color.hex }}></span>
             </div>
         ))
     }
@@ -87,15 +87,15 @@ const ProductDetail = () => {
                     </span>
                 </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-center">
-                <div className="bg-[#F9F1E7] w-[432px] h-[500px] rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="flex flex-col md:flex-row justify-center px-4">
+                <div className="bg-[#F9F1E7] w-full md:w-[432px] md:h-[500px] rounded-lg flex items-center justify-center overflow-hidden px-4">
                     <img 
                         src={product.images.mainImage} 
                         alt={product.title} 
                         className="w-96 h-96 object-contain rounded-lg"
                     />
                 </div>
-                <div className="ml-0 md:ml-20 mt-8 md:mt-0 font-poppins">
+                <div className="ml-0 md:ml-28 mt-8 md:mt-0 font-poppins">
                     <h1 className="text-4xl font-normal mb-2 mt-4">{product.title}</h1>
                     <span className="text-gray-400 font-medium text-2xl">R$ {product.salePrice}</span>
                     <div className="flex items-center mt-2">

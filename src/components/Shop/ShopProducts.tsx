@@ -86,7 +86,7 @@ const ShopProducts = () => {
                             <li key={index} className={`mx-2`}>
                                 <button
                                     onClick={() => paginate(index + 1)}
-                                    className={`px-4 py-2 rounded ${
+                                    className={`px-3 md:px-4 py-2 rounded ${
                                         index + 1 === currentPage
                                             ? 'bg-[#B88E2F] text-white'
                                             : 'bg-[#F9F1E7] text-black'

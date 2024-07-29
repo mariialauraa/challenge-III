@@ -23,8 +23,8 @@ const Description = () => {
   }
 
   return (
-    <div className="flex flex-col items-center border-t border-gray-400 mt-10 py-2 overflow-hidden">
-      <div className="flex space-x-8 mt-10 mb-3 font-poppins text-2xl">
+    <div className="flex flex-col items-center border-t border-gray-400 mt-10 py-2 px-8 md:px-0">
+      <div className="flex space-x-8 mt-10 mb-3 font-poppins text-xl md:text-2xl">
         <h2
           className={`cursor-pointer ${isActive === 'description' ? 'text-black font-medium' : 'text-gray-400 font-normal'}`}
           onClick={() => handleTabChange('description')}
@@ -45,7 +45,7 @@ const Description = () => {
             Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted phero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
         </p>}
       </div>
-      <div className="flex space-x-4 mt-4">
+      <div className="flex flex-wrap md:flex-nowrap space-x-4 justify-center">
         {product.images.gallery.map((image, index) => (
             <img key={index} src={image} alt={product.title} className='mt-9 w-48 h-48 rounded-lg'/>
         ))}

@@ -12,10 +12,10 @@ const Checkout = () => {
         <div className="my-12 font-poppins">
             <div className="flex flex-col md:flex-row justify-center items-start mt-20 space-y-10 md:space-y-0 md:space-x-10">
                 <div className="flex flex-col w-full md:w-1/2">
-                    <h1 className="font-semibold text-4xl mb-10 mx-auto w-96">Billing details</h1>
+                    <h1 className="font-semibold text-4xl mb-10 mx-auto w-96 px-4 md:px-0">Billing details</h1>
                     <FormCheckout />
                 </div>
-                <section className="flex flex-col max-w-[608px] w-full md:w-1/2">
+                <section className="flex flex-col max-w-[608px] w-full md:w-1/2 px-4 md:px-12">
                     <div className="flex gap-10 justify-between">
                         <div className="font-poppins">
                             <h2 className="text-2xl font-medium mb-3.5">Product</h2>

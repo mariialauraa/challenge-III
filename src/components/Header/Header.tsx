@@ -14,13 +14,13 @@ const Header = () => {
             <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
                 <img src={Logo} alt="logo"/>
             </div>
-            <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium">
+            <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium mx-8">
                 <Link to="/" className="text-black mr-14">Home</Link>
                 <Link to="/shop" className="text-black mr-14">Shop</Link>
                 <Link to="/" className="text-black mr-14">About</Link>
                 <Link to="/contact" className="text-black">Contact</Link>
             </nav>
-            <div className="flex items-center gap-12 md:gap-6 cursor-pointer py-2">
+            <div className="flex items-center gap-16 md:gap-6 cursor-pointer mt-6 md:mt-0">
                 <FaRegUser className="w-6 h-5"/>
                 <AiOutlineShoppingCart className="w-7 h-7"/>
                 <IoLogOutOutline onClick={logout} className="w-7 h-7"/>

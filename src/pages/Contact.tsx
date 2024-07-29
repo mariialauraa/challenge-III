@@ -14,11 +14,11 @@ const Contact = () => {
             <h1 className='font-semibold text-black text-4xl mb-3 text-center'>
                 Get In Touch With Us
             </h1>
-            <p className="text-center text-gray-400">
+            <p className="text-center text-gray-400 px-4">
                 For More Information About Our Product & Services. Please Feel Free To Drop Us <br/> An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
             </p>
             <section className="flex flex-col md:flex-row justify-center items-start mt-20 space-y-10 md:space-y-0 md:space-x-10">
-                <ul className="w-full max-w-md">
+                <ul className="w-full max-w-md px-4">
                     <li className="flex mb-10 gap-7">
                         <FaLocationDot className="w-6 h-6"/>
                         <div>

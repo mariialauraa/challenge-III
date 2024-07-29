@@ -2,8 +2,8 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
   return (
-    <footer className='max-w-[1440px] h-[505px] text-black pt-16 mx-auto'>
-        <div className='mx-auto grid grid-cols-1 md:grid-cols-4 ml-12 md:ml-24 justify-center'>
+    <footer className='max-w-[1440px] h-[505px] text-black pt-16 mx-auto px-10 md:px-24'>
+        <div className='mx-auto grid grid-cols-1 md:grid-cols-4 justify-center'>
             <div>
                 <h2 className='text-2xl font-poppins font-bold mb-12'>Funiro.</h2>
                 <p className='text-base font-poppins font-normal text-gray-400'>
@@ -24,7 +24,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <div className='ml-16 mt-10 md:ml-32 md:mt-0'>
+            <div className='mx-4 md:mx-20 mt-10 md:mt-0'>
                 <h3 className='text-base font-medium font-poppins text-gray-400 mb-6 md:mb-14'>Links</h3>
                 <ul className='text-black text-base font-medium font-poppins'>
                     <li className='mb-4 md:mb-12'>Home</li>
@@ -33,7 +33,7 @@ const Footer = () => {
                     <li className='mb-12'>Contact</li>
                 </ul>
             </div>
-            <div className='ml-16'>
+            <div className='mx-4 md:8 mt-4 md:mt-0'>
                 <h3 className='text-base font-medium font-poppins text-gray-400 mb-6 md:mb-14'>Help</h3>
                 <ul className='text-black text-base font-medium font-poppins'>
                     <li className='mb-4 md:mb-12'>Payment Options</li>
@@ -41,13 +41,13 @@ const Footer = () => {
                     <li className='mb-12'>Privacy Policies</li>
                 </ul>
             </div>
-            <div className='ml-16 font-poppins'>
+            <div className='mx-4 md:mx-auto mt-4 md:mt-0 mb-4 font-poppins'>
                 <h3 className='text-base font-medium font-poppins text-gray-400 mb-6 md:mb-14'>Newsletter</h3>
-                <form>
+                <form className='flex flex-wrap md:flex-nowrap gap-2'>
                     <input 
                         type="email"
                         placeholder='Enter Your Email Address'
-                        className='p-2 border-b-2 border-black mb-2 text-sm font-normal mr-2' 
+                        className='p-2 border-b-2 border-black text-sm font-normal w-52' 
                     />
                     <button className='text-black text-sm font-medium p-2 border-b-2 border-black'>
                         SUBSCRIBE
@@ -55,7 +55,7 @@ const Footer = () => {
                 </form>
             </div>
         </div>
-        <div className='border-t border-gray-300 ml-12 md:ml-24 mr-8 mt-6 md:mt-0 pb-4'>
+        <div className='border-t border-gray-300 ml-4 md:mx-auto mr-8 mt-6 md:mt-0 pb-4'>
             <p className='font-normal text-base text-black font-poppins pt-4 text-center md:text-start'>
                 2023 funiro. All rights reserved
             </p>

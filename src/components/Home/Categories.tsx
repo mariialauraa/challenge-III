@@ -4,7 +4,7 @@ import Bedroom from '../../assets/bedroom.png'
 
 const Categories = () => {
   return (
-    <div className='my-12 font-poppins text-center'>
+    <div className='my-12 font-poppins text-center px-4'>
         <h2 className='font-bold text-black text-3xl mb-2'>Browse The Range</h2>
         <p className='text-gray-600 text-xl font-normal'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -12,21 +12,21 @@ const Categories = () => {
         <ul className='flex justify-center pt-12 space-x-5'>
             <li className='flex flex-col items-center'>
                 <a href="">
-                    <img src={Dining} alt="Dining" className='rounded-lg mb-7'/>
+                    <img src={Dining} alt="Dining" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </a>
-                <span className='text-center font-semibold text-2xl'>Dining</span>
+                <span className='text-center font-semibold text-base md:text-2xl'>Dining</span>
             </li>
             <li className='flex flex-col items-center'>
                 <a href="">
-                    <img src={Living} alt="Living" className='rounded-lg mb-7'/>
+                    <img src={Living} alt="Living" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </a>
-                <span className='text-center font-semibold text-2xl'>Living</span>
+                <span className='text-center font-semibold text-base md:text-2xl'>Living</span>
             </li>
             <li className='flex flex-col items-center'>
                 <a href="">
-                    <img src={Bedroom} alt="Bedroom" className='rounded-lg mb-7'/>
+                    <img src={Bedroom} alt="Bedroom" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </a>
-                <span className='text-center font-semibold text-2xl'>Bedroom</span>
+                <span className='text-center font-semibold text-base md:text-2xl'>Bedroom</span>
             </li>
         </ul>
     </div>
