@@ -8,6 +8,7 @@ import Contact from '../pages/Contact';
 import { Login } from '../components/Auth/Login';
 import { Register } from '../components/Auth/Register';
 import Checkout from '../pages/Checkout';
+import Cart from '../pages/Cart';
 
 const AppRoutes = () => {
     const location = useLocation()
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/shop' element={<Shop />} />
                 <Route path="/product/:id" element={<SingleProduct />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path='/checkout' element={<Checkout />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/login' element={<Login />} />
