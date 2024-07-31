@@ -29,12 +29,17 @@ export type IProductsValues = {
     rating: number;
     images: Iimages;
 }
+
+export interface ICartProduct extends IProductsValues {
+    quantity: number;
+}
   
 export interface IProductsContext {
     products: IProductsValues[] | null;
     getSingleProduct: (id: number) => IProductsValues | undefined;
     filterCategory: (category: string) => IProductsValues[] | undefined;
-    cart: IProductsValues[] | null;
-    addCart: (id: number) => void;
-    setCart: React.Dispatch<React.SetStateAction<IProductsValues[] | null>>;
+    cart: ICartProduct[];
+    addCart: (id: number, quantity: number) => void;
+    removeCart: (id: number) => void;
+    setCart: React.Dispatch<React.SetStateAction<ICartProduct[]>>;
 }

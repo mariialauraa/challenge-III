@@ -1,15 +1,17 @@
-import { useProducts } from "../../hooks/useProducts";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useProducts } from "../../hooks/useProducts";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { Icolors } from '../../types/product_types';
-import { useState } from "react";
 import { FaFacebook, FaInstagramSquare } from 'react-icons/fa'
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>()
-    const { getSingleProduct } = useProducts()
+    const { getSingleProduct, addCart } = useProducts()
+
+    const [quantity, setQuantity] = useState<number>(1)
 
     if (!id) {
         return <div>Product not found</div>;
@@ -19,6 +21,20 @@ const ProductDetail = () => {
 
     if (!product) {
         return <div>Product not found</div>;
+    }
+
+    const incrementQuantity = () => {
+        setQuantity(prevQuantity => prevQuantity + 1)
+    }
+
+    const decrementQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(prevQuantity => prevQuantity - 1)
+        }
+    }
+
+    const handleAddToCart = () => {
+        addCart(product.id, quantity)
     }
 
     const renderStars = (rating: number) => {
@@ -112,11 +128,29 @@ const ProductDetail = () => {
                     </div>
                     <div className="flex items-center space-x-5 font-poppins mt-8">
                         <div className="w-32 h-16 border border-gray-300 rounded-xl flex items-center justify-between px-4">
-                            <button className="text-base font-normal">-</button>
-                            <span className="text-base font-medium">1</span>
-                            <button className="text-base font-normal">+</button>
+                            <button 
+                                className={`text-base font-normal 
+                                    ${quantity === 1 ? 'text-gray-400 cursor-not-allowed' : ''}`
+                                }
+                                onClick={decrementQuantity}
+                                disabled={quantity === 1}
+                            >
+                                -
+                            </button>
+                            <span className="text-base font-medium">{quantity}</span>
+                            <button 
+                                className="text-base font-normal"
+                                onClick={incrementQuantity}
+                            >
+                                +
+                            </button>
                         </div>
-                        <button className="w-52 h-16 border border-black rounded-2xl text-xl font-normal">Add To Cart</button>
+                        <button 
+                            className="w-52 h-16 border border-black rounded-2xl text-xl font-normal hover:bg-black hover:text-white transition-all"
+                            onClick={handleAddToCart}
+                        >
+                            Add To Cart
+                        </button>
                     </div>
                     <div className="border-t border-gray-400 mt-16 font-poppins font-normal text-base text-gray-400">
                         <h4 className="mt-10 mb-3">

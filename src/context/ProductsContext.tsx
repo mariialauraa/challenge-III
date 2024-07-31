@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState, ReactNode } from "react";
-import { IProductsValues, IProductsContext } from '../types/product_types';
+import { IProductsValues, IProductsContext, ICartProduct } from '../types/product_types';
 
 export const ProductsContext = createContext<IProductsContext | null>(null)
 
 export const ProductsProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<IProductsValues[] | null>(null)
-  const [cart, setCart] = useState<IProductsValues[] | null>(null)
+  const [cart, setCart] = useState<ICartProduct[]>([])
 
     useEffect(() => {
         async function fetchProducts() {
@@ -49,13 +49,28 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
         return products?.filter(product => product.category === category)
     }
 
-    const addCart = (id: number) => {
+    const addCart = (id: number, quantity: number = 1) => {
         const productToAdd = products?.find(product => product.id === id)
         if (productToAdd) {
-            const updatedCart = cart ? [...cart, productToAdd] : [productToAdd]
-            setCart(updatedCart)
-            localStorage.setItem('cart', JSON.stringify(updatedCart))
+            setCart(prevCart => {
+                const existingProduct = prevCart.find(item => item.id === id)
+                const updatedCart = existingProduct 
+                    ? prevCart.map(item =>
+                        item.id === id ? { ...item, quantity: item.quantity + quantity } : item
+                      )
+                    : [...prevCart, { ...productToAdd, quantity }]
+                localStorage.setItem('cart', JSON.stringify(updatedCart))
+                return updatedCart
+            })
         }
+    }
+
+    const removeCart = (id: number) => {
+        setCart(prevCart => {
+            const updatedCart = prevCart.filter(item => item.id !== id)
+            localStorage.setItem('cart', JSON.stringify(updatedCart))
+            return updatedCart
+        })
     }
 
     const values: IProductsContext = {
@@ -64,6 +79,7 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
         filterCategory,
         cart,
         addCart,
+        removeCart,
         setCart,
     }
 
