@@ -36,20 +36,26 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   }
 
     const logout = async () => {
-        try {
-            await signOut(auth)
-            console.log("Usuário deslogado")
-            alert('Logout bem-sucedido!')
-            navigate('/login')
-
-        } catch (error) {
-            if (error instanceof Error) {
-                setError(error.message)
-                alert(error.message)
-            } else {
-                setError('Erro desconhecido')
-                alert('Erro desconhecido. Tente novamente!')
+        const user = auth.currentUser
+        if (user) {
+            try {
+                await signOut(auth)
+                console.log("Usuário deslogado")
+                alert('Logout bem-sucedido!')
+                navigate('/login')
+    
+            } catch (error) {
+                if (error instanceof Error) {
+                    setError(error.message)
+                    alert(error.message)
+                } else {
+                    setError('Erro desconhecido')
+                    alert('Erro desconhecido. Tente novamente!')
+                }
             }
+        } else {
+            setError('Nenhum usuário autenticado')
+            alert('Nenhum usuário autenticado')
         }
     }
     

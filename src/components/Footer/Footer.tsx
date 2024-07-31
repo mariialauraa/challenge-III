@@ -10,16 +10,16 @@ const Footer = () => {
                     400 University Drive Suite 200 Coral Gables,<br/> FL 33134 USA
                 </p>
                 <div className='flex gap-4 mt-12'>
-                    <a href="https://www.facebook.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.facebook.com" aria-label="Facebook" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
                         <FaFacebookF />
                     </a>
-                    <a href="https://www.instagram.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.instagram.com" aria-label="Instagram" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
                         <FaInstagram />
                     </a>
-                    <a href="https://www.twitter.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.twitter.com" aria-label="Twitter" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
                         <FaTwitter />
                     </a>
-                    <a href="https://www.linkedin.com" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.linkedin.com" aria-label="LinkedIn" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
                         <FaLinkedinIn />
                     </a>
                 </div>
@@ -48,6 +48,7 @@ const Footer = () => {
                         type="email"
                         placeholder='Enter Your Email Address'
                         className='p-2 border-b-2 border-black text-sm font-normal w-52' 
+                        required
                     />
                     <button className='text-black text-sm font-medium p-2 border-b-2 border-black'>
                         SUBSCRIBE

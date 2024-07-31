@@ -140,13 +140,13 @@ const ProductDetail = () => {
                             <h4>Share</h4>
                             <span className="pl-12">:</span>
                             <div className="flex space-x-4 ml-4">
-                                <a href="https://facebook.com" className="text-black">
+                                <a href="https://facebook.com" aria-label="Facebook" target="blank" className="text-black">
                                     <FaFacebook className="w-5 h-5"/>
                                 </a>
-                                <a href="https://instagram.com" className="text-black">
+                                <a href="https://instagram.com" aria-label="Instagram" target="blank" className="text-black">
                                     <FaInstagramSquare className="w-5 h-5"/>
                                 </a>
-                                <a href="https://twitter.com" className="text-black">
+                                <a href="https://twitter.com" aria-label="Twitter" target="blank" className="text-black">
                                     <AiFillTwitterCircle className="w-5 h-5"/>
                                 </a>
                             </div>
