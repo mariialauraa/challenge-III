@@ -1,21 +1,52 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsBagX } from "react-icons/bs";
 import { IoIosCloseCircle } from "react-icons/io";
 
-const ModalCart = () => {
+interface ModalCartProps {
+    onClose: () => void;
+}
+
+const ModalCart: React.FC<ModalCartProps> = ({ onClose }) => {
     const navigate = useNavigate()
 
     const redirectCart = () => {
         navigate('/cart')
+        onClose()
     }
 
     const redirectCheckout = () => {
         navigate('/checkout')
+        onClose()
     }
 
+    const handleClickOutside = (e: MouseEvent) => {
+        const modalElement = document.querySelector('.modal-container')
+        if (modalElement && !modalElement.contains(e.target as Node)) {
+            onClose()
+        }
+    }
+
+    const handleEscKey = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+            onClose()
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside)
+        document.addEventListener('keydown', handleEscKey)
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+            document.removeEventListener('keydown', handleEscKey)
+        }
+    }, [])
+
   return (
-    <div>
-        <div className="flex flex-col gap-6 absolute transform -translate-x-[45%] md:-translate-x-[78%] translate-y-[5%] w-72 md:w-[417px] p-5 bg-white z-[1000]"
+    <div className="absolute z-[1000]">
+        <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+        <div className="modal-container flex flex-col gap-6 absolute transform -translate-x-[45%] md:-translate-x-[78%] translate-y-[5%] w-72 md:w-[417px] p-5 bg-white z-[10001]"
         >
             <div className="flex flex-col gap-4 p-2 font-poppins">
                 <div className="flex flex-row items-center justify-between gap-4">

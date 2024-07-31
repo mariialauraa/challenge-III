@@ -28,9 +28,9 @@ const Checkout = () => {
                             <p className="mt-5">Total</p>
                         </div>
                         <div className="font-poppins">
-                            <h2 className="text-2xl font-medium mb-3.5">Subtotal</h2>
-                            <p className="text-base font-light mb-5">Rs. 250,000.00</p>
-                            <p className="text-base font-light mb-5">Rs. 250,000.00</p>
+                            <h2 className="text-2xl font-medium mb-8 md:mb-3.5">Subtotal</h2>
+                            <p className="text-base font-light mb-7 md:mb-5">Rs. 250,000.00</p>
+                            <p className="text-base font-light mb-6 md:mb-5">Rs. 250,000.00</p>
                             <p className="text-[#B88E2F] font-bold text-2xl">Rs. 250,000.00</p>
                         </div>
                     </div>

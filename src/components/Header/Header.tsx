@@ -10,7 +10,9 @@ import ModalCart from "../Cart/ModalCart";
 const Header = () => {
     const { logout } = useAuth()
 
-    const[openModalCart, setOpenModalCart] = useState(false)
+    const[isModalOpen, setIsModalOpen] = useState(false)
+
+    const closeModal = () => setIsModalOpen(false)
 
   return (
     <div className="bg-white w-full">
@@ -28,12 +30,12 @@ const Header = () => {
                 <FaRegUser className="w-6 h-5"/>
                 <div>
                     <AiOutlineShoppingCart 
-                        onClick={() => setOpenModalCart((prev) => !prev)} 
+                        onClick={() => setIsModalOpen((prev) => !prev)} 
                         aria-haspopup="true"
-                        aria-expanded={openModalCart ? "true" : "false"}
+                        aria-expanded={isModalOpen ? "true" : "false"}
                         className="w-7 h-7"
                     />
-                    {openModalCart && <ModalCart />}
+                    {isModalOpen && <ModalCart onClose={closeModal}/>}
                 </div>
                 <IoLogOutOutline onClick={logout} className="w-7 h-7"/>
             </div>
