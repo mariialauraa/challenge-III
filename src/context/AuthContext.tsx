@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 await signOut(auth)
                 console.log("Usuário deslogado")
                 alert('Logout bem-sucedido!')
-                navigate('/login')
+                navigate('/')
     
             } catch (error) {
                 if (error instanceof Error) {

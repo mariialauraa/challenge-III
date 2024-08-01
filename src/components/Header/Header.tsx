@@ -2,15 +2,24 @@ import { FaRegUser } from "react-icons/fa"
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoLogOutOutline } from "react-icons/io5";
 import Logo from '../../assets/logo_furniro.svg'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { auth } from "../Auth/firebaseConfig.ts";
 import { useState } from "react";
 import ModalCart from "../Cart/ModalCart";
 import { useProducts } from "../../hooks/useProducts";
 
 const Header = () => {
     const { logout } = useAuth()
+    const navigate = useNavigate()
     const { cart } = useProducts()
+
+    const navigateToLogin = () => {
+        const user = auth.currentUser
+        if (!user) {
+            navigate('/login')
+        }
+    }
 
     const[isModalOpen, setIsModalOpen] = useState(false)
 
@@ -29,7 +38,7 @@ const Header = () => {
                 <Link to="/contact" className="text-black">Contact</Link>
             </nav>
             <div className="flex items-center gap-16 md:gap-6 cursor-pointer mt-6 md:mt-0">
-                <FaRegUser className="w-6 h-5"/>
+                <FaRegUser className="w-6 h-5" onClick={navigateToLogin}/>
                 <div className="relative">
                     <AiOutlineShoppingCart 
                         onClick={() => setIsModalOpen((prev) => !prev)} 

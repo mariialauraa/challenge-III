@@ -9,6 +9,7 @@ import { Login } from '../components/Auth/Login';
 import { Register } from '../components/Auth/Register';
 import Checkout from '../pages/Checkout';
 import Cart from '../pages/Cart';
+import ProtectRoute from './ProtectRoute';
 
 const AppRoutes = () => {
     const location = useLocation()
@@ -22,7 +23,14 @@ const AppRoutes = () => {
                 <Route path='/shop' element={<Shop />} />
                 <Route path="/product/:id" element={<SingleProduct />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path='/checkout' element={<Checkout />} />
+                <Route 
+                    path='/checkout' 
+                    element={
+                        <ProtectRoute>
+                            <Checkout />
+                        </ProtectRoute>
+                    } 
+                />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />

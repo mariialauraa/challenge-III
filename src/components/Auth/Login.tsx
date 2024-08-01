@@ -60,6 +60,9 @@ export function Login() {
                   {error && <div className="error-message mt-2 text-red-500 text-sm">{error}</div>}
 
                   <div className="mt-4 text-center">
+                      <Link to="/" className="text-sm text-[#B88E2F] hover:underline">Acessar como visitante</Link>
+                  </div>
+                  <div className="mt-4 text-center">
                       <p className="text-sm">Você não tem uma conta?</p>
                       <Link to="/register" className="text-sm text-[#B88E2F] hover:underline">Crie a sua conta aqui</Link>
                   </div>

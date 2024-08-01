@@ -1,8 +1,11 @@
 import { useProducts } from "../../hooks/useProducts";
+import { useNavigate } from "react-router-dom";
 import { TbTrashFilled } from "react-icons/tb";
+import { auth } from "../Auth/firebaseConfig.ts";
 
 const ProductCart = () => {
     const { cart, addCart, removeCart } = useProducts()
+    const navigate = useNavigate()
 
     const handleIncrementQuantity = (id: number) => {
         addCart(id, 1)
@@ -15,6 +18,15 @@ const ProductCart = () => {
     }
 
     const cartTotal = cart.reduce((total, item) => total + item.salePrice * item.quantity, 0).toFixed(2)
+
+    const handleCheckOut = () => {
+        const user = auth.currentUser
+        if (user) {
+            navigate('/checkout')
+        } else {
+            navigate('/login')
+        }
+    }
 
   return (
     <div className="flex flex-col md:flex-row justify-between p-8">
@@ -37,11 +49,15 @@ const ProductCart = () => {
                             </div>
                             <span className="text-gray-400 font-normal text-base">{item.title}</span>
                         </div>
-                        <div className="text-center text-gray-400 font-normal text-base p-8 md:p-0">Rs. {item.salePrice.toFixed(2)}</div>
+                        <div className="text-center text-gray-400 font-normal text-base p-8 md:p-0">
+                            Rs. {item.salePrice.toFixed(2)}
+                        </div>
                         <div className="flex items-center justify-center space-x-4">
                             <div className="w-24 h-12 border border-gray-300 rounded-xl flex items-center justify-between px-4">
                                 <button 
-                                    className={`text-base font-normal ${item.quantity === 1 ? 'text-gray-400 cursor-not-allowed' : ''}`}
+                                    className={`text-base font-normal 
+                                        ${item.quantity === 1 ? 'text-gray-400 cursor-not-allowed' : ''}`
+                                    }
                                     onClick={() => handleDecrementQuantity(item.id, item.quantity)}
                                     disabled={item.quantity === 1}
                                 >
@@ -58,7 +74,9 @@ const ProductCart = () => {
                         </div>
                         <div className="text-center p-8 md:p-0">
                             <div className="flex items-center justify-center">
-                                <span className="font-normal text-base mx-auto">Rs. {(item.salePrice * item.quantity).toFixed(2)}</span>
+                                <span className="font-normal text-base mx-auto">
+                                    Rs. {(item.salePrice * item.quantity).toFixed(2)}
+                                </span>
                                 <div className="text-[#B88E2F]">
                                     <TbTrashFilled
                                         onClick={() => removeCart(item.id)}
@@ -86,9 +104,11 @@ const ProductCart = () => {
                     <span className="font-poppins font-medium text-xl text-[#B88E2F]">Rs. {cartTotal}</span>
                 </div>
                 <div className="flex justify-center mb-10">
-                    <button className="w-56 h-14 border border-black rounded-2xl flex items-center justify-center px-4 mt-10 font-poppins text-xl font-normal hover:bg-black hover:text-white transition-all"
+                    <button 
+                        className="w-56 h-14 border border-black rounded-2xl flex items-center justify-center px-4 mt-10 font-poppins text-xl font-normal hover:bg-black hover:text-white transition-all"
+                        onClick={handleCheckOut}
                     >
-                        Check Out
+                        {auth.currentUser ? "Check Out" : "Login"}
                     </button>
                 </div>
             </div>
