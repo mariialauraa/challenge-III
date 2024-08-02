@@ -104,12 +104,25 @@ const ProductDetail = () => {
                 </p>
             </div>
             <div className="flex flex-col md:flex-row justify-center px-4">
-                <div className="bg-[#F9F1E7] w-full md:w-[432px] md:h-[500px] rounded-lg flex items-center justify-center overflow-hidden px-4">
-                    <img 
-                        src={product.images.mainImage} 
-                        alt={product.title} 
-                        className="w-96 h-96 object-contain rounded-lg"
-                    />
+                <div className="hidden md:flex flex-col items-center justify-start space-y-9 mr-9">
+                    {product.images.gallery.map((image, index) => (
+                       <div key={index} className="bg-[#F9F1E7] p-2 rounded-lg">
+                           <img 
+                               src={image} 
+                               alt={product.title} 
+                               className="w-20 h-20 object-contain rounded-lg bg-[#F9F1E7]"
+                           />
+                       </div>
+                    ))}
+                </div>
+                <div className="justify-center overflow-hidden">
+                    <div className="bg-[#F9F1E7] p-2 md:p-8 rounded-lg">
+                        <img 
+                            src={product.images.mainImage} 
+                            alt={product.title} 
+                            className="w-96 h-96 object-contain rounded-lg"
+                        />
+                    </div>
                 </div>
                 <div className="ml-0 md:ml-28 mt-8 md:mt-0 font-poppins">
                     <h1 className="text-4xl font-normal mb-2 mt-4">{product.title}</h1>
