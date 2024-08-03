@@ -7,9 +7,10 @@ export const useCheckoutForms = () => {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm<CheckoutFormSchema>({
         resolver: zodResolver(checkoutFormSchema)
     })
 
-    return { register, handleSubmit, errors }
+    return { register, handleSubmit, errors, reset }
 }

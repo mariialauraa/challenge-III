@@ -4,8 +4,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import FormContact from "../components/Contact/FormContact";
 import Banner from "../components/Global/Banner";
 
-
-
 const Contact = () => {
   return (
     <div>
