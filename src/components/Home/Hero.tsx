@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Background from '../../assets/hero.png'
 
 const Hero = () => {
     const navigate = useNavigate()
@@ -11,7 +10,8 @@ const Hero = () => {
   return (
     <div className="relative h-[715px] flex items-center justify-start">
         <img 
-            src={Background} alt="living room" 
+            src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/hero.png' 
+            alt="living room" 
             className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative max-w-[643px] w-full flex items-center justify-end pt-24 ml-auto mr-14 font-poppins">

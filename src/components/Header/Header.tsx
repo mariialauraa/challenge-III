@@ -1,7 +1,6 @@
 import { FaRegUser } from "react-icons/fa"
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoLogOutOutline } from "react-icons/io5";
-import Logo from '../../assets/logo_furniro.svg'
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { auth } from "../Auth/firebaseConfig.ts";
@@ -29,7 +28,9 @@ const Header = () => {
     <div className="bg-white w-full">
         <div className="max-w-[90rem] mx-auto flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center p-4">
             <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
-                <img src={Logo} alt="logo"/>
+                <Link to="/">
+                    <img src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/logo_furniro.svg' alt="logo"/>
+                </Link>
             </div>
             <nav className="flex flex-wrap md:flex-nowrap gap-4 font-poppins font-medium mx-8">
                 <Link to="/" className="text-black mr-14">Home</Link>

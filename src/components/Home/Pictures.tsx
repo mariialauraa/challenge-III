@@ -1,5 +1,3 @@
-import ShareSetup from '../../assets/share_setup.png'
-
 const Pictures = () => {
   return (
     <div className='mt-10 px-6 text-center font-poppins'>
@@ -9,7 +7,7 @@ const Pictures = () => {
         <h2 className='text-black mt-2 font-bold text-3xl md:text-4xl'>
             #FuniroFurniture
         </h2>
-        <img src={ShareSetup} alt="Home Pictures" className='mx-auto w-full'/>
+        <img src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/share_setup.png' alt="Home Pictures" className='mx-auto w-full'/>
     </div>
   )
 }

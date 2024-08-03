@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom'
-import Dining from '../../assets/dining.png'
-import Living from '../../assets/living.png'
-import Bedroom from '../../assets/bedroom.png'
 
 const Categories = () => {
   return (
@@ -13,19 +10,19 @@ const Categories = () => {
         <ul className='flex justify-center pt-12 space-x-5'>
             <li className='flex flex-col items-center'>
                 <Link to="/shop">
-                    <img src={Dining} alt="Dining" className='rounded-lg mb-7 w-48 md:w-full'/>
+                    <img src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/dining.png' alt="Dining" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </Link>
                 <span className='text-center font-semibold text-base md:text-2xl'>Dining</span>
             </li>
             <li className='flex flex-col items-center'>
                 <Link to="/shop">
-                    <img src={Living} alt="Living" className='rounded-lg mb-7 w-48 md:w-full'/>
+                    <img src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/living.png' alt="Living" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </Link>
                 <span className='text-center font-semibold text-base md:text-2xl'>Living</span>
             </li>
             <li className='flex flex-col items-center'>
                 <Link to="/shop">
-                    <img src={Bedroom} alt="Bedroom" className='rounded-lg mb-7 w-48 md:w-full'/>
+                    <img src='https://desafio3mlr.s3.us-east-2.amazonaws.com/assets/bedroom.png' alt="Bedroom" className='rounded-lg mb-7 w-48 md:w-full'/>
                 </Link>
                 <span className='text-center font-semibold text-base md:text-2xl'>Bedroom</span>
             </li>

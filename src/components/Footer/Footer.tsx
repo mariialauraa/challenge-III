@@ -1,6 +1,11 @@
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
   return (
     <footer className='max-w-[1440px] h-[505px] text-black pt-16 mx-auto px-10 md:px-24'>
         <div className='mx-auto grid grid-cols-1 md:grid-cols-4 justify-center'>
@@ -10,16 +15,16 @@ const Footer = () => {
                     400 University Drive Suite 200 Coral Gables,<br/> FL 33134 USA
                 </p>
                 <div className='flex gap-4 mt-12'>
-                    <a href="https://www.facebook.com" aria-label="Facebook" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.facebook.com" aria-label="Facebook" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50">
                         <FaFacebookF />
                     </a>
-                    <a href="https://www.instagram.com" aria-label="Instagram" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.instagram.com" aria-label="Instagram" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50">
                         <FaInstagram />
                     </a>
-                    <a href="https://www.twitter.com" aria-label="Twitter" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.twitter.com" aria-label="Twitter" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50">
                         <FaTwitter />
                     </a>
-                    <a href="https://www.linkedin.com" aria-label="LinkedIn" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <a href="https://www.linkedin.com" aria-label="LinkedIn" target="blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50">
                         <FaLinkedinIn />
                     </a>
                 </div>
@@ -27,10 +32,18 @@ const Footer = () => {
             <div className='mx-4 md:mx-20 mt-10 md:mt-0'>
                 <h3 className='text-base font-medium font-poppins text-gray-400 mb-6 md:mb-14'>Links</h3>
                 <ul className='text-black text-base font-medium font-poppins'>
-                    <li className='mb-4 md:mb-12'>Home</li>
-                    <li className='mb-4 md:mb-12'>Shop</li>
-                    <li className='mb-4 md:mb-12'>About</li>
-                    <li className='mb-12'>Contact</li>
+                    <li className='mb-4 md:mb-12'>
+                        <Link to="/" onClick={scrollToTop}>Home</Link>
+                    </li>
+                    <li className='mb-4 md:mb-12'>
+                        <Link to="/shop" onClick={scrollToTop}>Shop</Link>
+                    </li>
+                    <li className='mb-4 md:mb-12'>
+                        <Link to="/" onClick={scrollToTop}>About</Link>
+                    </li>
+                    <li className='mb-12'>
+                        <Link to="/contact" onClick={scrollToTop}>Contact</Link>
+                    </li>
                 </ul>
             </div>
             <div className='mx-4 md:8 mt-4 md:mt-0'>

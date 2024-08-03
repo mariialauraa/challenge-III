@@ -32,6 +32,10 @@ const ShopProducts = () => {
 
     const totalPages = Math.ceil(products.length / productsPerPage)
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
     return (
         <div className='flex flex-col items-center'>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 md:gap-8 justify-center mt-12'>
@@ -40,7 +44,11 @@ const ShopProducts = () => {
                         key={product.id}
                         className='p-4 relative w-[285px] mx-auto'
                     >
-                        <Link to={`/product/${product.id}`} className='block h-full'>
+                        <Link 
+                            to={`/product/${product.id}`} 
+                            className='block h-full'
+                            onClick={scrollToTop}
+                        >
                             <img 
                                 src={product.images.mainImage} 
                                 alt={product.title} 
