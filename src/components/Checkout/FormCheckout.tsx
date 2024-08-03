@@ -2,11 +2,55 @@ import { useCheckoutForms } from "../../hooks/useCheckoutForms";
 import { CheckoutFormSchema } from "../../schemas/checkoutFormSchema";
 
 const FormCheckout = ({ onSubmit }: { onSubmit: (data: CheckoutFormSchema, resetForm: () => void) => void }) => {
-    const { register, handleSubmit, errors, reset } = useCheckoutForms()
+    const { register, handleSubmit, errors, reset, setValue, trigger } = useCheckoutForms()
 
     const handleFormSubmit = (data: CheckoutFormSchema) => {
         onSubmit(data, reset)
     }
+
+    function fetchAddress(zipCode: string): void {
+
+        if (zipCode.length !== 8) {
+            alert('CEP inválido! O CEP deve conter 8 dígitos')
+            return
+        }
+
+        const url = `https://viacep.com.br/ws/${zipCode}/json/`
+    
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição')
+                }
+                return response.json()
+            })
+            .then(data => {
+                if (data.erro) {
+                    alert('CEP não encontrado')
+                } else {
+                    setValue("streetAddress", data.logradouro || "")
+                    setValue("addOnAddress", data.bairro || "")
+                    setValue("city", data.localidade || "")
+                    setValue("province", data.uf || "")
+
+                    trigger(["streetAddress", "addOnAddress", "city", "province"])
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error)
+                alert('Ocorreu um erro ao buscar o endereço')
+            });
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            e.preventDefault()
+            
+            const zipCode = (e.target as HTMLInputElement).value
+            fetchAddress(zipCode)
+        }
+    }
+    
 
     return (
         <form id="checkoutForm" onSubmit={handleSubmit(handleFormSubmit)} className="mx-auto w-72 md:w-96">
@@ -56,6 +100,7 @@ const FormCheckout = ({ onSubmit }: { onSubmit: (data: CheckoutFormSchema, reset
                     id="zipCode"
                     {...register("zipCode")}
                     className="h-10 pl-4 border border-gray-400 rounded-md"
+                    onKeyDown={handleKeyDown}
                 />
                 {errors.zipCode && (
                     <small className="text-red-500 text-xs italic">

@@ -6,9 +6,10 @@ import { useProducts } from "../hooks/useProducts";
 import { CheckoutFormSchema } from "../schemas/checkoutFormSchema";
 
 const Checkout = () => {
-    const { cart } = useProducts()
+    const { cart, setCart } = useProducts()
     const [paymentMethod, setPaymentMethod] = useState("")
     const [formError, setFormError] = useState("")
+    const [successMessage, setSuccessMessage] = useState(false)
 
     const cartSubtotal = cart.reduce((total, item) => total + item.salePrice * item.quantity, 0).toFixed(2)
 
@@ -24,11 +25,20 @@ const Checkout = () => {
         console.log("Payment Method:", paymentMethod)
 
         resetForm()
+        clearCart()
+        setSuccessMessage(true)
+
+        setTimeout(() => setSuccessMessage(false), 3000)
     }
 
     const handlePaymentMethodChange = (method: string) => {
         setPaymentMethod(method)
         setFormError("")
+    }
+
+    const clearCart = () => {
+        localStorage.removeItem('cart')
+        setCart([])
     }
 
     return (
@@ -127,6 +137,13 @@ const Checkout = () => {
                             >
                                 Place order
                             </button>
+                        </div>
+                        <div className="mx-auto mt-4">
+                            {successMessage && (
+                                <div className="mb-4 p-4 text-[#B88E2F] bg-[#F9F1E7] rounded-md">
+                                    Pedido realizado com sucesso!
+                                </div>
+                            )}
                         </div>
                     </section>
                 </div>
