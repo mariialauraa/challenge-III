@@ -1,41 +1,64 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer';
 
 describe('Footer Component', () => {
-    test('renders company name and address', () => {
-        render(<Footer />)
 
-        expect(screen.getByRole('heading', { name: /Funiro\./i })).toBeInTheDocument()
-        expect(screen.getByText(/400 University Drive Suite 200 Coral Gables,/i)).toBeInTheDocument()
-    })
+  it('should render the company name and address', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    )
 
-    test('renders navigation links', () => {
-        render(<Footer />)
-        
-        expect(screen.getByText(/Home/i)).toBeInTheDocument()
-        expect(screen.getByText(/Shop/i)).toBeInTheDocument()
-        expect(screen.getByText(/About/i)).toBeInTheDocument()
-        expect(screen.getByText(/Contact/i)).toBeInTheDocument()
-    })
+    expect(screen.getByRole('heading', { name: /Funiro\./i })).toBeInTheDocument()
+    expect(screen.getByText(/400 University Drive Suite 200 Coral Gables,/i)).toBeInTheDocument()
+  })
 
-    test('renders social media icons', () => {
-        render(<Footer />)
+  it('should render navigation links', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    )
 
-        expect(screen.getByRole('link', { name: /facebook/i })).toBeInTheDocument()
-        expect(screen.getByRole('link', { name: /instagram/i })).toBeInTheDocument()
-        expect(screen.getByRole('link', { name: /twitter/i })).toBeInTheDocument()
-        expect(screen.getByRole('link', { name: /linkedin/i })).toBeInTheDocument()
-    })
+    expect(screen.getByRole('link', { name: /Home/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Shop/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /About/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Contact/i })).toBeInTheDocument()
+  })
 
-    test('renders newsletter form', () => {
-        render(<Footer />)
+  it('should render social media icons', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    )
 
-        expect(screen.getByPlaceholderText(/Enter Your Email Address/i)).toBeInTheDocument()
-        expect(screen.getByText(/SUBSCRIBE/i)).toBeInTheDocument()
-    })
+    expect(screen.getByRole('link', { name: /facebook/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /instagram/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /twitter/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /linkedin/i })).toBeInTheDocument()
+  })
 
-    test('renders copyright text', () => {
-        render(<Footer />)
-        expect(screen.getByText(/2023 funiro. All rights reserved/i)).toBeInTheDocument()
-    })
+  it('should render the newsletter form', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByPlaceholderText(/Enter Your Email Address/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /SUBSCRIBE/i })).toBeInTheDocument()
+  })
+
+  it('should render the copyright text', () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    )
+
+    expect(screen.getByText(/2023 funiro. All rights reserved/i)).toBeInTheDocument()
+  })
 })
