@@ -1,32 +1,36 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { IProductsValues } from '../../types/product_types'
+import { Link, useLocation } from 'react-router-dom'
+import { useProducts } from '../../hooks/useProducts';
 import { LiaSlidersHSolid } from "react-icons/lia";
 import { HiViewGrid } from "react-icons/hi";
 import { TbLayoutDistributeHorizontal } from "react-icons/tb";
 
+const useQuery = () => {
+    return new URLSearchParams(useLocation().search)
+}
+
 const ShopProducts = () => {
-    const [products, setProducts] = useState<IProductsValues[]>([])
+    const { products, filterCategory } = useProducts()
+    const query = useQuery()
+    const initialCategory = query.get('category')
+
     const [currentPage, setcurrentPage] = useState(1)
     const [productsPerPage, setProductsPerPage] = useState(12)
     const [sortOrder, setSortOrder] = useState("default")
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(initialCategory)
 
     useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const response = await fetch('/data/products.json')
-                const data = await response.json()
-                setProducts(data.products)
-            } catch (error) {
-                console.error('Erro ao buscar produtos', error)
-            }
-        }
+        setSelectedCategory(initialCategory)
+    }, [initialCategory])
 
-        fetchProducts()
-    }, [])
+    const handleCategoryChange = (category: string | null) => {
+        setSelectedCategory(category)
+        setcurrentPage(1)
+    }
 
-    const sortedProducts = [...products]
+    const filteredProducts = selectedCategory ? filterCategory(selectedCategory) : products 
 
+    const sortedProducts = [...(filteredProducts || [])]
     if (sortOrder === "highest") {
         sortedProducts.sort((a, b) => b.salePrice - a.salePrice)
     } else if (sortOrder === "lowest") {
@@ -42,7 +46,7 @@ const ShopProducts = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }        
 
-    const totalPages = Math.ceil(products.length / productsPerPage)
+    const totalPages = Math.ceil((filteredProducts?.length || 0) / productsPerPage)
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -57,6 +61,17 @@ const ShopProducts = () => {
                             <LiaSlidersHSolid className='w-6 h-6'/>
                         </div>
                         <span className='font-poppins text-lg'>Filter</span>
+                        <select
+                            className='px-2 py-1 border bg-white rounded-md font-poppins'
+                            value={selectedCategory || ''}
+                            onChange={(e) => handleCategoryChange(e.target.value || null)}
+                        >
+                            <option value="">All Categories</option>
+                            <option value="Sofás">Sofás</option>
+                            <option value="Mesas">Mesas</option>
+                            <option value="Armarios">Armários</option>
+                            <option value="Cadeiras">Cadeiras</option>
+                        </select>
                         <div className='px-2'>
                             <HiViewGrid className='w-6 h-6'/>
                         </div>
@@ -67,8 +82,8 @@ const ShopProducts = () => {
                             <span className="absolute left-0 w-0.5 h-8 bg-gray-400"/>
                         </span>
                         <span className='font-poppins'>
-                            Showing {indexOfFirstProduct + 1} - {indexOfLastProduct > products.length ? products.length 
-                            : indexOfLastProduct} of {products.length} results
+                            Showing {indexOfFirstProduct + 1} - {indexOfLastProduct > (filteredProducts?.length || 0) ? 
+                            (filteredProducts?.length || 0) : indexOfLastProduct} of {filteredProducts?.length || 0} results
                         </span>
                     </div>
 
