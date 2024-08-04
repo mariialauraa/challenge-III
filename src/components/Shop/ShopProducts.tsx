@@ -67,10 +67,10 @@ const ShopProducts = () => {
                             onChange={(e) => handleCategoryChange(e.target.value || null)}
                         >
                             <option value="">All Categories</option>
-                            <option value="Sofás">Sofás</option>
-                            <option value="Mesas">Mesas</option>
-                            <option value="Armarios">Armários</option>
-                            <option value="Cadeiras">Cadeiras</option>
+                            <option value="Sofás">Sofas</option>
+                            <option value="Mesas">Tables</option>
+                            <option value="Armarios">Closet</option>
+                            <option value="Cadeiras">Chairs</option>
                         </select>
                         <div className='px-2'>
                             <HiViewGrid className='w-6 h-6'/>
