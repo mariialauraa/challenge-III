@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar pastas e arquivos de cobertura de testes
+coverage/
+clover.xml
+coverage-final.json
+lcov.info
