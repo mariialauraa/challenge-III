@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# DESAFIO III - FRONTEND
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto dedicado a criação de um e-commerce, utilizando as tecnologias React, TypeScript e Tailwind CSS. 
+O objetivo deste projeto é fornecer uma plataforma simples e moderna para compra de produtos online, com uma interface de usuário responsiva e uma experiência de navegação intuitiva. 
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: para adicionar tipagem estática ao código.
+- **Tailwind CSS**: framework CSS para criar layouts modernos e responsivos.
 
-## Expanding the ESLint configuration
+## Funcionalidades do projeto:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Navegação pela NavBar, para rotas de Home, Shop e Contact.
+- Telas de longin e registro de usuários, com Firebase.
+- Listagem de produtos, com exibição de produtos disponíveis, com filtragem por categoria e preço.
+- Paginação.
+- Página de detalhes do produto, com produtos relacionados.
+- Carrinho de compras com adição e remoção de produtos no carrinho, com cálculo do total.
+- Redirecionamento para as rotas de Cart e Checkout.
+- Rota Checkout protegida, somente para usuários autenticados.
+- Validação dos formulários com Zod e React Hook Form.
+- Utilização da API viaCep para preenchimento dos campos de endereço.
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar o Projeto:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Você pode clonar o projeto, usando o comando: git clone.
+2. Navegue até o diretório do projeto, usando este comando: cd challenge-III.
+3. Instale as dependências com este comando: npm i.
+4. Em seguida, execute o projeto usando o comando: npm run dev
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+ou você pode executar o projeto no seu navegador com essa url: http://18.229.156.31/
